@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<style>
+
+  body {
+    background-image: url("images/backvibe2.png");
+    /*background-position: center; !* Center the image *!*/
+    /*background-repeat: no-repeat; !* Do not repeat the image *!
+    background-size: cover; !* Resize the background image to cover the entire container *!
+    max-height: available;*/
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100vh;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.3/howler.core.min.js"></script>
+<script>
+
+  function onStart() {
+    const sound = new Howl({
+      src: ['audio/website2.mp3'],
+      autoplay: true,
+    });
+  }
+</script>
+
+<body>
+
+
+
+
+
+<audio id="audioPlayer" controls>
+  <source src="audio/website2.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+<img src="images/page.png" alt="Smiley face"  style="float:right">
+<!--<div style="background-image: url('images/countdown-1-1000x1000.jpg');">-->
+<!--</div>-->
+</body>
+</html>

@@ -1,6 +1,139 @@
-<html>
-<head></head>
+<!--<!doctype html>-->
+<!--<html class="no-js" lang="">-->
+
+<!--<head>-->
+<!--  <meta charset="utf-8">-->
+<!--  <title></title>-->
+<!--  <meta name="description" content="">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+
+<!--  <link rel="manifest" href="site.webmanifest">-->
+<!--  <link rel="apple-touch-icon" href="icon.png">-->
+<!--  &lt;!&ndash; Place favicon.ico in the root directory &ndash;&gt;-->
+
+<!--  <link rel="stylesheet" href="css/normalize.css">-->
+
+<!--  <link rel="stylesheet" href="css/main.css">-->
+
+<!--  <meta name="theme-color" content="#fafafa">-->
+<!--</head>-->
+
+<!--<body>-->
+<!--  &lt;!&ndash;[if IE]>-->
+<!--    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>-->
+<!--  <![endif]&ndash;&gt;-->
+
+<!--  &lt;!&ndash; Add your site or application content here &ndash;&gt;-->
+<!--  <p>Vibe check</p>-->
+<!--  <script src="js/vendor/modernizr-3.8.0.min.js"></script>-->
+<!--  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>-->
+<!--  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>-->
+<!--  <script src="js/plugins.js"></script>-->
+<!--  <script src="js/main.js"></script>-->
+
+<!--  &lt;!&ndash; Google Analytics: change UA-XXXXX-Y to be your site's ID. &ndash;&gt;-->
+<!--  <script>-->
+<!--    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;-->
+<!--    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')-->
+<!--  </script>-->
+<!--  <script src="https://www.google-analytics.com/analytics.js" async></script>-->
+<!--</body>-->
+
+<!--</html>-->
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Vibe Check</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+
+
+  <!-- Font -->
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700%7CPoppins:400,500" rel="stylesheet">
+
+
+  <link href="common-css/ionicons.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="common-css/jquery.classycountdown.css" />
+
+  <link href="06-comming-soon/css/styles.css" rel="stylesheet">
+
+  <link href="06-comming-soon/css/responsive.css" rel="stylesheet">
+
+  <script src="js/lottie.min.js"></script>
+
+</head>
 <body>
-<h1>Hi</h1>
+
+<div id="lottie" style="width: 100%; height: 20vh;"></div>
+
+<div class="main-area-wrapper" style="background-image:url(images/back.png)">
+  <div class="main-area center-text" >
+
+    <div class="display-table">
+      <div class="display-table-cell">
+
+        <h1 class="title"><b>Coming Soon</b></h1>
+        <p class="desc font-white">Our website is currently being built by Prince who's learning how to make the website.
+          Hopefully it's all done for tomorrow's show stay tuned.</p>
+
+        <div id="normal-countdown" data-date="2020/05/07 07:00 PM"></div>
+        <a id="nextLink" style="visibility: hidden" class="notify-btn" href="mdayradio.html"><b>Play the show</b></a>
+        <script>
+          const linkButton = document.getElementById("nextLink");
+          setInterval(() => {
+            const date = new Date().getTime();
+            const v = 1588842000000; // 1588842000000
+            console.log(date, v);
+            if (date > v) {
+              linkButton.style.visibility = "visible"
+            } else {
+              linkButton.style.visibility = "hidden";
+            }
+          }, 1000)
+        </script>
+
+
+
+        <ul class="social-btn">
+          <li class="list-heading">Follow us for update</li>
+<!--          <li><a href="#"><i class="ion-social-facebook"></i></a></li>-->
+<!--          <li><a href="#"><i class="ion-social-twitter"></i></a></li>-->
+<!--          <li><a href="#"><i class="ion-social-googleplus"></i></a></li>-->
+          <li><a href="#"><i class="ion-social-instagram-outline"></i></a></li>
+<!--          <li><a href="#"><i class="ion-social-pinterest"></i></a></li>-->
+        </ul>
+
+      </div><!-- display-table -->
+    </div><!-- display-table-cell -->
+  </div><!-- main-area -->
+</div><!-- main-area-wrapper -->
+
+
+
+
+
+<script>
+  lottie.loadAnimation({
+    container: document.getElementById("lottie"), // the dom element that will contain the animation
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+
+    // TODO: basically change this json file :)
+    path: 'js/anim/designer-developer.json' // the path to the animation json
+  });
+</script>
+<!-- SCIPTS -->
+
+<script src="common-js/jquery-3.1.1.min.js"></script>
+
+<script src="common-js/jquery.countdown.min.js"></script>
+
+<script src="common-js/scripts.js"></script>
+
 </body>
 </html>
