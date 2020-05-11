@@ -10,9 +10,13 @@
 
 // Cache references to DOM elements.
 var elms = ['track', 'timer', 'duration', 'playBtn', 'pauseBtn', 'prevBtn', 'nextBtn', 'playlistBtn', 'volumeBtn', 'progress', 'bar', 'wave', 'loading', 'playlist', 'list', 'volume', 'barEmpty', 'barFull', 'sliderBtn'];
-elms.forEach(function (elm) {
+// elms.forEach((elm) => window[elm] = document.getElementById(elm));
+
+elms.forEach(function (elm)
+{
   window[elm] = document.getElementById(elm);
-});
+}
+);
 
 /**
  * Player class containing the state of our playlist and where we are in it.
