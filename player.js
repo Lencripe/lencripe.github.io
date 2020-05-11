@@ -364,7 +364,7 @@ var wave = new SiriWave({
   speed: 0.05,
   amplitude: 0.8,
   frequency: 4,
-  style: "ios",
+  style: "ios9",
   color: "#FFF"
 });
 wave.start();
